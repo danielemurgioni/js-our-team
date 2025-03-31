@@ -40,7 +40,6 @@ const teamMembers = [
 // creo una funzione per inserire i membri
 const createMemberCard = (member) => {
 
-
   const card = `<div class="col-12 col-md-6 col-lg-4 bg-dark text-white">
                     <div id="member-card" class="row">
                         <div id="picture" class="col-4 p-0">
@@ -56,3 +55,8 @@ const createMemberCard = (member) => {
 
   document.getElementById("members").innerHTML += card;
 };
+
+//uso un FOR con la funzione createMemberCard per inserire tutti gli oggetti presenti dentro l'array teamMembers nel DOM
+for(let i=0; i<teamMembers.length; i++){
+  createMemberCard(teamMembers[i]);
+}
