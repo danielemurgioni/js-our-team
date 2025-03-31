@@ -39,19 +39,24 @@ const teamMembers = [
 
 // creo una funzione per creare la card di un solo membro nel DOM
 const createMemberCard = (member) => {
+
+  // uso la destrutturazione per semplificare la scrittura di card
+  const {name, role, email, img} = member;
+
   // scrittura in html
   const card = `<div class="col-12 col-md-6 col-lg-4 bg-dark text-white">
                     <div id="member-card" class="row">
                         <div id="picture" class="col-4 p-0">
-                            <img src="./${member.img}" class="img-fluid">
+                            <img src="./${img}" class="img-fluid">
                         </div>
                         <div id="info" class="col-8" >
-                            <h4 id="name">${member.name}</h4>
-                            <div id="role">${member.role}</div>
-                            <div id="email" class="text-primary">${member.email}</div>
+                            <h4 id="name">${name}</h4>
+                            <div id="role">${role}</div>
+                            <div id="email" class="text-primary">${email}</div>
                         </div>
                     </div>
                 </div>`;
+
   // che inserisco all'interno con .innerHTML
   document.getElementById("members").innerHTML += card;
 };
