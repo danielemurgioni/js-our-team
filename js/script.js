@@ -36,3 +36,23 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+// creo una funzione per inserire i membri
+const createMemberCard = (member) => {
+
+
+  const card = `<div class="col-12 col-md-6 col-lg-4 bg-dark text-white">
+                    <div id="member-card" class="row">
+                        <div id="picture" class="col-4 p-0">
+                            <img src="./${member.img}" class="img-fluid">
+                        </div>
+                        <div id="info" class="col-8" >
+                            <h4 id="name">${member.name}</h4>
+                            <div id="role">${member.role}</div>
+                            <div id="email" class="text-primary">${member.email}</div>
+                        </div>
+                    </div>
+                </div>`;
+
+  document.getElementById("members").innerHTML += card;
+};
