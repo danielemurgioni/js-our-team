@@ -37,9 +37,9 @@ const teamMembers = [
   }
 ];
 
-// creo una funzione per inserire i membri
+// creo una funzione per creare la card di un solo membro nel DOM
 const createMemberCard = (member) => {
-
+  // scrittura in html
   const card = `<div class="col-12 col-md-6 col-lg-4 bg-dark text-white">
                     <div id="member-card" class="row">
                         <div id="picture" class="col-4 p-0">
@@ -52,7 +52,7 @@ const createMemberCard = (member) => {
                         </div>
                     </div>
                 </div>`;
-
+  // che inserisco all'interno con .innerHTML
   document.getElementById("members").innerHTML += card;
 };
 
